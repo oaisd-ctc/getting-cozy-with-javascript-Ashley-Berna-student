@@ -15,6 +15,6 @@ function wordAppears()
 function changeTextColor()
 {
     var input = document.getElementById("txt-color").value;
-    document.getElementById("p2").style.color = input;
+    document.getElementById("p3").style.background = input;
 }
 
