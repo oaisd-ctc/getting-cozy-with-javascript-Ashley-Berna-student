@@ -18,12 +18,42 @@ function changeTextColor()
     document.getElementById("p3").style.background = input;
 }
 
-const changeShape = document.getElementById("changeShape");
-const shape = document.getElementById("shape");
+const shape = document.getElementById("shapes");
 
 shape.addEventListener('change', () => {
-    if (changeShape == '#circle')
+
+    var changeShape = document.getElementById('changeShape');
+    selectElement = document.querySelector('#shapes');
+    output = selectElement.value;
+
+    if (output == 'circle')
     {
-        document.getElementById('shape').style.borderRadius = 500;
+        changeShape.style.borderRadius = "300px";
+        changeShape.style.width = "500px";
+        changeShape.style.height = "500px";
+        changeShape.style.borderLeft = "5px solid black";
+        changeShape.style.borderRight = "5px solid black";
+        changeShape.style.borderBottom = "5px solid black";
+        changeShape.style.borderTop = "5px solid black";
+    }
+    else if (output == 'square')
+    {
+        changeShape.style.borderRadius = "0px";
+        changeShape.style.width = "500px";
+        changeShape.style.height = "500px";
+        changeShape.style.borderLeft = "5px solid black";
+        changeShape.style.borderRight = "5px solid black";
+        changeShape.style.borderBottom = "5px solid black";
+        changeShape.style.borderTop = "5px solid black";
+    }
+    else if (output == 'triangle')
+    {
+        changeShape.style.borderRadius = "0px";
+        changeShape.style.width = "0";
+        changeShape.style.height = "0";
+        changeShape.style.borderLeft = "200px solid black";
+        changeShape.style.borderRight = "0px solid black";
+        changeShape.style.borderBottom = "200px solid transparent";
+        changeShape.style.borderTop = "200px solid transparent";
     }
 })
