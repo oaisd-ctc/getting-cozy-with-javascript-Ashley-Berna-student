@@ -3,6 +3,7 @@ document.getElementById("btn-show").addEventListener("click", wordAppears);
 document.getElementById("btn-change-color").addEventListener("click", changeTextColor);
 document.getElementById("btn-move-right").addEventListener("click", pressRight);
 document.getElementById("btn-move-left").addEventListener("click", pressLeft);
+document.getElementById("toggleContent").addEventListener("click", toggleOnOff);
 
 function wordDissapears()
 {
@@ -70,4 +71,9 @@ function pressRight()
 {
     moveBox.style.left = moveBox.offsetLeft + 100 + "px";
     console.log("move right");
+}
+
+function toggleOnOff()
+{
+    document.getElementById("toggledWords").classList.toggle("toggleWordsOnOff");
 }
