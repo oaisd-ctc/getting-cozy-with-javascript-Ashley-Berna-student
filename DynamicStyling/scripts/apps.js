@@ -140,21 +140,10 @@ function formValidation()
     }
 }
 
-
-
 function interactiveList()
 {
     var node = document.createElement("LI");
     var textnode = document.createTextNode(document.getElementById("input").value);
     node.appendChild(textnode);
-    var ul = document.getElementById("addedItem");
-    ul.appendChild(node);
-    var btn = document.createElement('BUTTON');
-    btn.innerHTML = 'Delete';
-    ul.append(btn);
-    btn.addEventListener("click", deleteFromInteractiveList);
-    function deleteFromInteractiveList()
-    {
-        delete node;
-    }
+    document.getElementById("addedItem").appendChild(node);
 }
