@@ -143,7 +143,7 @@ function formValidation()
 function interactiveList()
 {
     var node = document.createElement("LI");
-    var textNode = document.createTextNode(document.getElementById("text").value);
-    node.appendChild(textNode);
-    document.getElementById("text").appendChild(node);
+    var textnode = document.createTextNode(document.getElementById("input").value);
+    node.appendChild(textnode);
+    document.getElementById("addedItem").appendChild(node);
 }
