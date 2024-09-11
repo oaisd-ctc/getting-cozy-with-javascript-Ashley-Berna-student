@@ -155,6 +155,7 @@ function interactiveList()
     btn.addEventListener("click", deleteFromInteractiveList);
     function deleteFromInteractiveList()
     {
-        delete node;
+        node.remove();
+        btn.remove();
     }
 }
