@@ -4,3 +4,7 @@
 html {
     background-color:lightyellow;
 }
+#liDiv {
+    display: flex;
+    flex-direction: row;
+}

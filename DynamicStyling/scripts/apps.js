@@ -6,6 +6,7 @@ document.getElementById("btn-move-left").addEventListener("click", pressLeft);
 document.getElementById("toggleContent").addEventListener("click", toggleOnOff);
 document.getElementById("submitForm").addEventListener("click", formValidation);
 document.getElementById("addItem").addEventListener("click", interactiveList);
+document.getElementById("colors").addEventListener("change", changeWords);
 
 function wordDissapears()
 {
@@ -140,10 +141,53 @@ function formValidation()
     }
 }
 
+
+
 function interactiveList()
 {
     var node = document.createElement("LI");
+    var div = document.createElement("div");
+    div.id = "liDiv";
     var textnode = document.createTextNode(document.getElementById("input").value);
     node.appendChild(textnode);
-    document.getElementById("addedItem").appendChild(node);
+    var ul = document.getElementById("addedItem");
+    ul.appendChild(node);
+    var btn = document.createElement('BUTTON');
+    btn.innerHTML = 'Delete';
+    node.appendChild(btn);
+    btn.addEventListener("click", deleteFromInteractiveList);
+    function deleteFromInteractiveList()
+    {
+        node.remove();
+        btn.remove();
+    }
+}
+
+function changeWords()
+{
+    var words = document.getElementById('changeableWords');
+    selectElement = document.querySelector('#colors');
+    output = selectElement.value;
+
+    if (output == 'blue')
+    {
+        words.style.color = "blue";
+        words.style.background = "none";
+        words.style.fontSize += "2px";
+        words.style.removeProperty('fontStyle');
+    }
+    else if (output == 'red')
+    {
+        words.style.color = "red";
+        words.style.background = "none";
+        words.style.fontSize = "1em";
+        words.style.fontStyle = "italic";
+    }
+    else if (output == 'green')
+    {
+        words.style.color = "green";
+        words.style.background = "lightGreen";
+        words.style.fontSize = "1em";
+        words.style.removeProperty('fontStyle');
+    }
 }
