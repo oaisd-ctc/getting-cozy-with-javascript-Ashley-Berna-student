@@ -173,21 +173,21 @@ function changeWords()
     {
         words.style.color = "blue";
         words.style.background = "none";
-        words.style.fontSize += "2px";
-        words.style.removeProperty('fontStyle');
+        words.style.fontSize = "17.3px";
+        words.style.fontStyle = "normal";
     }
     else if (output == 'red')
     {
         words.style.color = "red";
         words.style.background = "none";
-        words.style.fontSize = "1em";
+        words.style.fontSize = "15.3px";
         words.style.fontStyle = "italic";
     }
     else if (output == 'green')
     {
         words.style.color = "green";
         words.style.background = "lightGreen";
-        words.style.fontSize = "1em";
-        words.style.removeProperty('fontStyle');
+        words.style.fontSize = "15.3px";
+        words.style.fontStyle = "normal";
     }
 }
